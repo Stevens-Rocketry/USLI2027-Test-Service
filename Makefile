@@ -2,15 +2,16 @@
 
 PROG=	tsservice
 OBJS=	tsservice.o notify.o
-CFLAGS=	-Wall -Werror -Wextra -Wformat=2 -Wjump-misses-init -Wlogical-op -Wpedantic -Wshadow -g
-LDFLAGS= -lsystemd
+CFLAGS=		-Wall -Werror -Wextra -Wformat=2 -Wjump-misses-init -Wlogical-op -Wpedantic -Wshadow -g
+LDFLAGS= 	-lsystemd
+VPATH=		src
 
 all: ${PROG}
 
 -include .depend
 
 depend:
-	${CC} -M ${CFLAGS} *.c > .depend
+	${CC} -M ${CFLAGS} src/*.c > .depend
 
 ${PROG}: ${OBJS}
 	@echo $@ depends on $?

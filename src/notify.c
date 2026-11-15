@@ -9,8 +9,8 @@
 #include <inttypes.h>
 #include <stdio.h>
 #include <sys/un.h>
-#include <time.h>
 #include <systemd/sd-daemon.h>
+#include <time.h>
 
 int notify_reloading(void) {
   /* A buffer with length sufficient to format the maximum UINT64 value. */
