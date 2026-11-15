@@ -3,7 +3,7 @@
  *    Stevens Rocketry USLI 2027
  */
 
-#ifndef XXSERVICE_H
-#define XXSERVICE_H
+#ifndef TSSERVICE_H
+#define TSSERVICE_H
 
-#endif //XXSERVICE_H
+#endif //TSSERVICE_H

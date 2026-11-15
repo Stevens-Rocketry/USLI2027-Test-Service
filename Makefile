@@ -1,8 +1,9 @@
 # By George K Oliynyk @ 2026
 
-PROG=	xxservice
-OBJS=	xxservice.o
+PROG=	tsservice
+OBJS=	tsservice.o notify.o
 CFLAGS=	-Wall -Werror -Wextra -Wformat=2 -Wjump-misses-init -Wlogical-op -Wpedantic -Wshadow -g
+LDFLAGS= -lsystemd
 
 all: ${PROG}
 
