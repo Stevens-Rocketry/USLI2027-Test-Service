@@ -1,0 +1,10 @@
+[Unit]
+Description=A test service that simply prints its status to its log. Intended to be used to test the payload yocto configuration and command&control service.
+
+[Service]
+Type=notify-reload
+ExecStart=/usr/bin/tsservice
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
